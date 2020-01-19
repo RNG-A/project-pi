@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/more"
+        android:id="@+id/overflow_menu"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <item
+                android:id="@id/act_keySetting"
+                android:title="@string/key_setting" />
+            <item
+                android:id="@id/act_decryption"
+                android:title="@string/decrypt"/>
+        </menu>
+    </item>
+
+
+
+
+</menu>

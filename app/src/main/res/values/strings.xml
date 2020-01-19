@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ECCryptoSMS</string>
+    <string name="profil">profil</string>
+    <string name="settings">settings</string>
+    <string name="back">Back</string>
+    <string name="key_setting">Key Setting</string>
+    <string name="decrypt">decryption</string>
+    <string name="public_key">Your Public Key</string>
+    <string name="private_key">Your Private Key</string>
+    <string name="copy">Copy Public Key</string>
+    <string name="generate">Generate key</string>
+    <string name="decrypt_msg">Decrypt</string>
+    <string name="encrypted_msg">Encrypted Message</string>
+    <string name="decrypted_msg">Message</string>
+</resources>
