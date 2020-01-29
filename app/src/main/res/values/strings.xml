@@ -12,4 +12,5 @@
     <string name="decrypt_msg">Decrypt</string>
     <string name="encrypted_msg">Encrypted Message</string>
     <string name="decrypted_msg">Message</string>
+    <string name="preference_name">KeyPreferences</string>
 </resources>
