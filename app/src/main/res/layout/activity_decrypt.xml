@@ -28,21 +28,10 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:hint="@string/encrypted_msg"
-        android:inputType="textMultiLine"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/maintoolbar"></EditText>
-
-    <EditText
-        android:id="@+id/decrypted_message"
-        android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:layout_marginTop="8dp"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/private_key" />
 
     <Button
         android:id="@+id/decrypt"
@@ -55,17 +44,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/decrypted_message" />
+        app:layout_constraintTop_toBottomOf="@+id/message_to_decrypt" />
 
-    <EditText
-        android:id="@+id/private_key"
+    <TextView
+        android:id="@+id/decrypted_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Key"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/message_to_decrypt" />
+        app:layout_constraintTop_toBottomOf="@+id/decrypt" />
 
 
 </android.support.constraint.ConstraintLayout>

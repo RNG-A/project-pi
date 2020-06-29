@@ -24,11 +24,6 @@ import java.security.PublicKey;
 
 
 
-
-
-
-
-
 public class MainActivity extends AppCompatActivity {
 
 
@@ -42,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar maintoolbar = findViewById(R.id.maintoolbar);
         setSupportActionBar(maintoolbar);
-        getSupportActionBar().setTitle("Messages");
+        getSupportActionBar().setTitle("Send Message");
         Button sendBtn = (Button) findViewById(R.id.sendBtn);
         final EditText message,key;
-        message = (EditText)findViewById(R.id.message);
-        key = (EditText)findViewById(R.id.key);
+        message =findViewById(R.id.message);
+        key = findViewById(R.id.key);
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -63,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     protected void send(EditText message, EditText _key ) throws Exception {
 
 
-        TextView encrypted_message = (TextView) findViewById(R.id.encrypted_msg);
+        TextView encrypted_message =  findViewById(R.id.encrypted_msg);
         encrypted_message.setText(_key.getText().toString());
         String key,msg;
         key = _key.getText().toString();
@@ -81,11 +76,6 @@ public class MainActivity extends AppCompatActivity {
         shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, cipherText);
         startActivity(Intent.createChooser(shareIntent, null));
     }
-
-
-
-
-
 
 
     @Override

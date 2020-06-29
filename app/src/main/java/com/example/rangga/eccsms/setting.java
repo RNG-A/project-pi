@@ -21,7 +21,7 @@ import java.util.Base64;
 public class setting extends AppCompatActivity {
      private TextView public_key ;
      private ClipData myClip;
-     private ClipboardManager keyClipboard = (ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class setting extends AppCompatActivity {
         getSupportActionBar().setTitle("Settings");
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         SharedPreferences key_preference = getApplicationContext().getSharedPreferences(String.valueOf(R.string.preference_name), MODE_PRIVATE);
         final SharedPreferences.Editor key_editor = key_preference.edit();
         final SharedPreferences key_getter = getSharedPreferences(String.valueOf(R.string.preference_name), MODE_PRIVATE);
@@ -88,7 +89,7 @@ public class setting extends AppCompatActivity {
         copy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ClipboardManager keyClipboard = (ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
                 String text = public_key.getText().toString();
                 myClip = ClipData.newPlainText("text", text);
                 keyClipboard.setPrimaryClip(myClip);
